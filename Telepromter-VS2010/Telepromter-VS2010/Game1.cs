@@ -140,19 +140,21 @@ namespace Telepromter_VS2010
             StringSize = font.MeasureString("H").Y * scale;
             Lines.Clear();
             int width = Window.ClientBounds.Width - 210;
-            bool carryImportant = false;
             for (int i = 0; i < Words.Length; i++)
             {
                 List<AdvancedDrawString> seperatedLines = new List<AdvancedDrawString>();
                 String[] lineWords = Words[i].Split(' ');
                 int ln = lineWords.Length;
                 int wordNum = 0;
+                bool carryImportant = false;
                 while (wordNum < ln)
                 {
                     String tempString = "";
                     while (wordNum < ln) if (getLineLength(tempString + lineWords[wordNum]) >= width) break;
                         else { tempString += (lineWords[wordNum] + " "); wordNum++; }
-                    seperatedLines.Add(new AdvancedDrawString(tempString, font, scale, middleX, carryImportant));
+                    AdvancedDrawString advanced = new AdvancedDrawString(tempString, font, scale, middleX, carryImportant);
+                    seperatedLines.Add(advanced);
+                    carryImportant = advanced.important;
                 }
                 Lines.AddRange(seperatedLines);
             }

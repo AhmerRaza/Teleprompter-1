@@ -25,3 +25,12 @@ D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\Telepr
 D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\Telepromter-VS2010.exe
 D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\Telepromter-VS2010.pdb
+C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\SelfDestruct.txt
+C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Content\Pericles14.xnb
+C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Content\triangle.xnb
+C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Telepromter-VS2010.exe
+C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Telepromter-VS2010.pdb
+C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\Telepromter-VS2010.csprojResolveAssemblyReference.cache
+C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\Telepromter-VS2010.exe
+C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\Telepromter-VS2010.pdb

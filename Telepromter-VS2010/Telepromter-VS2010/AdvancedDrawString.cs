@@ -20,13 +20,12 @@ namespace Telepromter_VS2010
         public AdvancedDrawString(String line, SpriteFont font, float scale, float midX, bool carry)
         {
             this.important = carry;
-            if (Regex.IsMatch(line, @"<[\w]+>") || line.Contains("!"))
+            if (important || Regex.IsMatch(line, @"<[\w]+>") || line.Contains("!"))
             {
                 words = line.Split(' ');
                 colors = new byte[words.Length];
                 for (int i = 0; i < words.Length; i++)
                     if (!important && words[i].StartsWith("!")) {words[i] = Regex.Replace(words[i], "!", ""); important = true; colors[i] = 2; }
-                    else if (important && words[i].Contains("!")) { words[i] = Regex.Replace(words[i], "!", ""); important = false; colors[i] = 2; }
                     else if (important) { colors[i] = 2; }
                     else if (Regex.IsMatch(words[i], @"<[\w]+>"))
                     { colors[i] = 1; if (!AdvancedDrawString.nameColors.ContainsKey(words[i])) AdvancedDrawString.nameColors.Add(words[i], lastCol()); }

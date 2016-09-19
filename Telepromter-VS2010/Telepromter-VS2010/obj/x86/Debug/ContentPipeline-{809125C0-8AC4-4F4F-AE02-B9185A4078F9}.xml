@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Content\Pericles14.xnb</Output>
-      <Time>2016-08-25T09:27:14-04:00</Time>
+      <Output>C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Content\Pericles14.xnb</Output>
+      <Time>2016-09-19T15:14:57.7190155-04:00</Time>
     </Item>
     <Item>
       <Source>triangle.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Content\triangle.xnb</Output>
-      <Time>2016-09-13T09:59:26-04:00</Time>
+      <Output>C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Content\triangle.xnb</Output>
+      <Time>2016-09-19T15:14:57.768018-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -26,10 +26,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010Content\</RootDirectory>
-      <LoggerRootDirectory>D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -57,8 +57,8 @@
         <Value>2011-09-01T16:22:30-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2016-07-06T15:09:45.1724648-04:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-09-14T18:59:59.8929328-04:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
