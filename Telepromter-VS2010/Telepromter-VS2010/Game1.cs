@@ -10,27 +10,23 @@ namespace Telepromter_VS2010
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Texture2D triangle;
         List<AdvancedDrawString> Lines = new List<AdvancedDrawString>();
         string[] Words;
-        SpriteFont font;
-        Texture2D triangle;
-        float startPos = 200;
-        float middleX, middleY;
-        bool hasLoaded = false;
-        float fontSize, scale = 1;
-        Vector2 halfHalf, leftTri, rightTri;
+        public static float middleX, scale = 1;
+        public static SpriteFont font;
+        float startPos = 200, middleY, fontSize, StringSize = 0;
+        bool hasLoaded = false, showCuts = false;
+        Vector2 halfHalf, leftTri, rightTri, zero = Vector2.Zero;
         Rectangle triRect = new Rectangle(0, 0, 400, 400);
-        bool showCuts = false;
-        Vector2 zero = Vector2.Zero;
         KeyboardState oldState;
-        float StringSize = 0;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-            //this.graphics.ToggleFullScreen();
+            this.graphics.ToggleFullScreen();
             middleY = graphics.PreferredBackBufferHeight / 2;
             middleX = graphics.PreferredBackBufferWidth / 2;
             IsMouseVisible = true;
@@ -90,7 +86,7 @@ namespace Telepromter_VS2010
         protected void smartScroll(float offset)
         {
             float newVal = startPos + offset;
-            if (hasLoaded && newVal < 225 && newVal > 300 - Lines.Count * StringSize) startPos = newVal;
+            if (hasLoaded && newVal < 225 && newVal > 280 - Lines.Count * StringSize) startPos = newVal;
         }
         protected bool KeyPressed(Keys key)
         {
@@ -119,14 +115,15 @@ namespace Telepromter_VS2010
         {
             if (showCuts)
             {
-                batch.DrawString(font, "F1 : Hide Shortcuts", new Vector2(10, 10), Color.Gray, 0f, zero, .17f, SpriteEffects.None, 0f);
-                batch.DrawString(font, "F2 : Scroll to Top", new Vector2(10, 30), Color.Gray, 0f, zero, .17f, SpriteEffects.None, 0f);
-                batch.DrawString(font, "F3 : Reload", new Vector2(10, 50), Color.Gray, 0f, zero, .17f, SpriteEffects.None, 0f);
-                batch.DrawString(font, "+/- : Font Size", new Vector2(10, 70), Color.Gray, 0f, zero, .17f, SpriteEffects.None, 0f);
-                batch.DrawString(font, "Right Click : Stop Scrolling", new Vector2(10, 90), Color.Gray, 0f, zero, .17f, SpriteEffects.None, 0f);
-                batch.DrawString(font, "Left Click : Fast Scrolling", new Vector2(10, 110), Color.Gray, 0f, zero, .17f, SpriteEffects.None, 0f);
+                batch.DrawString(font, "F1 : Hide Shortcuts", new Vector2(10, 10), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
+                batch.DrawString(font, "F2 : Scroll to Top", new Vector2(10, 30), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
+                batch.DrawString(font, "F3 : Reload", new Vector2(10, 50), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
+                batch.DrawString(font, "+/- : Font Size", new Vector2(10, 70), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
+                batch.DrawString(font, "Right Click : Stop Scrolling", new Vector2(10, 90), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
+                batch.DrawString(font, "Left Click : Fast Scrolling", new Vector2(10, 110), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
+                batch.DrawString(font, "ESC : Exit Application", new Vector2(10, 130), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
             }
-            else batch.DrawString(font, "F1 : Show Shortcuts", new Vector2(10, 10), Color.Gray, 0f, zero, .17f, SpriteEffects.None, 0f);
+            else batch.DrawString(font, "F1 : Show Shortcuts", new Vector2(10, 10), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
         }
         protected void SuperSecret()
         {
@@ -152,7 +149,7 @@ namespace Telepromter_VS2010
                     String tempString = "";
                     while (wordNum < ln) if (getLineLength(tempString + lineWords[wordNum]) >= width) break;
                         else { tempString += (lineWords[wordNum] + " "); wordNum++; }
-                    AdvancedDrawString advanced = new AdvancedDrawString(tempString, font, scale, middleX, carryImportant);
+                    AdvancedDrawString advanced = new AdvancedDrawString(tempString,carryImportant);
                     seperatedLines.Add(advanced);
                     carryImportant = advanced.important;
                 }

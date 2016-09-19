@@ -13,32 +13,27 @@ namespace Telepromter_VS2010
         String[] words;
         byte[] colors;
         String Line;
-        SpriteFont font;
-        float scale, length, spaceLength, midX;
+        float length, spaceLength;
         bool custom = false;
         public bool important = false;
-        public AdvancedDrawString(String line, SpriteFont font, float scale, float midX, bool carry)
+        public AdvancedDrawString(String line, bool carry)
         {
             this.important = carry;
-            if (important || Regex.IsMatch(line, @"<[\w]+>") || line.Contains("!"))
+            if (important || line.StartsWith("<") || line.StartsWith("!"))
             {
                 words = line.Split(' ');
                 colors = new byte[words.Length];
                 for (int i = 0; i < words.Length; i++)
-                    if (!important && words[i].StartsWith("!")) {words[i] = Regex.Replace(words[i], "!", ""); important = true; colors[i] = 2; }
+                    if (!important && words[i].StartsWith("!")) { words[i] = words[i].Substring(1); important = true; colors[i] = 2; }
                     else if (important) { colors[i] = 2; }
                     else if (Regex.IsMatch(words[i], @"<[\w]+>"))
                     { colors[i] = 1; if (!AdvancedDrawString.nameColors.ContainsKey(words[i])) AdvancedDrawString.nameColors.Add(words[i], lastCol()); }
                     else colors[i] = 0;
-                length = font.MeasureString(line).X * scale;
-                spaceLength = font.MeasureString(" ").X * scale;
+                length = Game1.font.MeasureString(line).X * Game1.scale;
+                spaceLength = Game1.font.MeasureString(" ").X * Game1.scale;
                 custom = true;
             }
             else Line = line;
-            this.midX = midX;
-            this.font = font;
-            this.scale = scale;
-
         }
         public Color lastCol()
         {
@@ -57,18 +52,21 @@ namespace Telepromter_VS2010
         {
             if (custom)
             {
-                float tempWidth = midX - (length / 2);
+                float tempWidth = Game1.middleX - (length / 2);
                 for (int i = 0, t = words.Length; i < t; i++)
                 {
-                    Color drawColor = Color.White;
-                    if (colors[i] == 1) drawColor = AdvancedDrawString.nameColors[words[i]];
-                    else if (colors[i] == 2) drawColor = Color.Gray;
-                    else if (highlighted) drawColor = Color.Yellow;
-                    batch.DrawString(font, words[i], new Vector2(tempWidth, yVal), drawColor, 0f, halfHalf, scale, SpriteEffects.None, 0f);
-                    tempWidth += (font.MeasureString(words[i]).X * scale) + spaceLength;
+                    Color drawColor;
+                    switch (colors[i])
+                    {
+                        case 1: { drawColor = AdvancedDrawString.nameColors[words[i]]; break; }
+                        case 2: { drawColor = Color.Gray; break; }
+                        default: { if (highlighted) drawColor = Color.Yellow; else drawColor = Color.White; break; }
+                    }
+                    batch.DrawString(Game1.font, words[i], new Vector2(tempWidth, yVal), drawColor, 0f, halfHalf, Game1.scale, SpriteEffects.None, 0f);
+                    tempWidth += (Game1.font.MeasureString(words[i]).X * Game1.scale) + spaceLength;
                 }
             }
-            else batch.DrawString(font, Line, new Vector2(midX - (font.MeasureString(Line).X / 2 * scale), yVal), highlighted ? Color.Yellow : Color.White, 0f, halfHalf, scale, SpriteEffects.None, 0f);
+            else batch.DrawString(Game1.font, Line, new Vector2(Game1.middleX - (Game1.font.MeasureString(Line).X / 2 * Game1.scale), yVal), highlighted ? Color.Yellow : Color.White, 0f, halfHalf, Game1.scale, SpriteEffects.None, 0f);
         }
     }
 }
