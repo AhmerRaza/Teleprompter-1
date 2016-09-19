@@ -1,11 +1,16 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telepromter-VS2010", "Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010.csproj", "{9DE8A7E7-CC9D-4340-B4E3-EF6A5EF22CCE}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Telepromter-VS2010Content", "Telepromter-VS2010\Telepromter-VS2010Content\Telepromter-VS2010Content.contentproj", "{809125C0-8AC4-4F4F-AE02-B9185A4078F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telepromter-VS2010Content", "Telepromter-VS2010\Telepromter-VS2010Content\Telepromter-VS2010Content.contentproj", "{809125C0-8AC4-4F4F-AE02-B9185A4078F9}"
 EndProject
 Global
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86

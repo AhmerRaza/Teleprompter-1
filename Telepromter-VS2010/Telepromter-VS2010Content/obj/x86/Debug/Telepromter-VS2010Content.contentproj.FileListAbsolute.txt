@@ -1,4 +1,0 @@
-C:\Users\Tubes\Desktop\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010Content\obj\x86\Debug\Telepromter-VS2010Content.contentprojResolveAssemblyReference.cache
-E:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010Content\obj\x86\Debug\Telepromter-VS2010Content.contentprojResolveAssemblyReference.cache
-D:\Telepromter-VS2010\Telepromter-VS2010\Telepromter-VS2010Content\obj\x86\Debug\Telepromter-VS2010Content.contentprojResolveAssemblyReference.cache
-C:\Users\antho\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010Content\obj\x86\Debug\Telepromter-VS2010Content.contentprojResolveAssemblyReference.cache

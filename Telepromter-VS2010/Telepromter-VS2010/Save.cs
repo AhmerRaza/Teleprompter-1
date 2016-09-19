@@ -18,21 +18,13 @@ namespace Telepromter_VS2010
         {
             int size = 0;
             using (BinaryReader reader = new BinaryReader(File.Open(userAppData + "Config.dat", FileMode.Open)))
-            {
                 size = reader.ReadInt32();
-                reader.Dispose();
-                reader.Close();
-            }
             return size;
         }
         public void writeScore(int size)
         {
             using (BinaryWriter writer = new BinaryWriter(File.Open(userAppData + "Config.dat", FileMode.Create)))
-            {
                 writer.Write(size);
-                writer.Dispose();
-                writer.Close();
-            }
         }
     }
 }
