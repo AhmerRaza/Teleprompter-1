@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 namespace Telepromter_VS2010
 {
     public class Game1 : Game
@@ -15,7 +16,8 @@ namespace Telepromter_VS2010
         string[] Words;
         public static float middleX, scale = 1;
         public static SpriteFont font;
-        float startPos = 200, middleY, fontSize, StringSize = 0;
+        int middleY;
+        float startPos = 200, fontSize, StringSize = 0;
         bool hasLoaded = false, showCuts = false;
         Vector2 halfHalf, leftTri, rightTri, zero = Vector2.Zero;
         Rectangle triRect = new Rectangle(0, 0, 400, 400);
@@ -52,7 +54,7 @@ namespace Telepromter_VS2010
             try
             {
                 using (StreamReader reader = new StreamReader(File.OpenRead(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\Telepromter\" + "Prompt.txt")))
-                    Words = reader.ReadToEnd().Split('\n');
+                    Words = Regex.Replace(reader.ReadToEnd(), @"[^\u0000-\u007F]+", string.Empty).Split('\n');
             }
             catch (FileNotFoundException e)
             {
@@ -65,23 +67,33 @@ namespace Telepromter_VS2010
             new Save().writeScore((int)fontSize);
             base.UnloadContent();
         }
+        MouseState ms;
+        KeyboardState keyboard;
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed) smartScroll((middleY - Mouse.GetState().Y) / 10);
-            else smartScroll((middleY - Mouse.GetState().Y) / 100);
-            if (Mouse.GetState().RightButton == ButtonState.Pressed) Mouse.SetPosition(100, (int)middleY);
-            else if (Keyboard.GetState().IsKeyDown(Keys.Down)) { Mouse.SetPosition(100, (int)middleY); smartScroll(-5); }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Up)) { Mouse.SetPosition(100, (int)middleY); smartScroll(5); }
+            ms = Mouse.GetState();
+            keyboard = Keyboard.GetState();
+
+            if (ms.LeftButton == ButtonState.Pressed) smartScroll((middleY - ms.Y) / 10);
+            else smartScroll((middleY - ms.Y) / 100);
+
+            if (keyboard.IsKeyDown(Keys.Escape)) Exit();
+            else if (ms.RightButton == ButtonState.Pressed) Mouse.SetPosition(100, middleY);
+            else if (keyboard.IsKeyDown(Keys.Down)) { Mouse.SetPosition(100, middleY); smartScroll(-5); }
+            else if (keyboard.IsKeyDown(Keys.Up)) { Mouse.SetPosition(100, middleY); smartScroll(5); }
             else if (KeyPressed(Keys.F1)) showCuts = !showCuts;
-            else if (KeyPressed(Keys.F2)) { Mouse.SetPosition(100, (int)middleY); startPos = 225; }
-            else if (KeyPressed(Keys.F3)) { Mouse.SetPosition(100, (int)middleY); startPos = 225; loadFile(); }
+            else if (KeyPressed(Keys.F2)) { Mouse.SetPosition(100, middleY); resetPos(); }
+            else if (KeyPressed(Keys.F3)) { Mouse.SetPosition(100, middleY); resetPos(); loadFile(); }
             else if (KeyPressed(Keys.OemPlus)) { fontSize++; load(); }
             else if (KeyPressed(Keys.OemMinus) && fontSize > 10) { fontSize--; load(); }
-            else if (KeyPressed(Keys.H)) { Mouse.SetPosition(100, (int)middleY); startPos = 225; SuperSecret(); }
-            oldState = Keyboard.GetState();
+            else if (KeyPressed(Keys.H)) { Mouse.SetPosition(100, middleY); resetPos(); SuperSecret(); }
+
+            oldState = keyboard;
             base.Update(gameTime);
+        }
+        protected void resetPos()
+        {
+            startPos = 225;
         }
         protected void smartScroll(float offset)
         {
@@ -90,7 +102,7 @@ namespace Telepromter_VS2010
         }
         protected bool KeyPressed(Keys key)
         {
-            return Keyboard.GetState().IsKeyUp(key) && oldState.IsKeyDown(key);
+            return keyboard.IsKeyUp(key) && oldState.IsKeyDown(key);
         }
         protected override void Draw(GameTime gameTime)
         {
@@ -149,7 +161,7 @@ namespace Telepromter_VS2010
                     String tempString = "";
                     while (wordNum < ln) if (getLineLength(tempString + lineWords[wordNum]) >= width) break;
                         else { tempString += (lineWords[wordNum] + " "); wordNum++; }
-                    AdvancedDrawString advanced = new AdvancedDrawString(tempString,carryImportant);
+                    AdvancedDrawString advanced = new AdvancedDrawString(tempString, carryImportant);
                     seperatedLines.Add(advanced);
                     carryImportant = advanced.important;
                 }

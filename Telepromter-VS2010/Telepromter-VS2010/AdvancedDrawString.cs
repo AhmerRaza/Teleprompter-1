@@ -45,7 +45,7 @@ namespace Telepromter_VS2010
         }
         public void ColorGen()
         {
-            AdvancedDrawString.availableColors = new System.Collections.Generic.List<Color>() { Color.Teal, Color.Tomato, Color.Pink, Color.SpringGreen, Color.Brown, Color.DarkOrchid, Color.IndianRed, Color.SkyBlue };
+            AdvancedDrawString.availableColors = new List<Color>() { Color.Teal, Color.Tomato, Color.Pink, Color.SpringGreen, Color.Brown, Color.DarkOrchid, Color.IndianRed, Color.SkyBlue };
         }
         Vector2 halfHalf = new Vector2(0.5f, 0.5f);
         public void draw(SpriteBatch batch, float yVal, bool highlighted)
@@ -59,7 +59,7 @@ namespace Telepromter_VS2010
                     switch (colors[i])
                     {
                         case 1: { drawColor = AdvancedDrawString.nameColors[words[i]]; break; }
-                        case 2: { drawColor = Color.Gray; break; }
+                        case 2: { drawColor = Color.Red; break; }
                         default: { if (highlighted) drawColor = Color.Yellow; else drawColor = Color.White; break; }
                     }
                     batch.DrawString(Game1.font, words[i], new Vector2(tempWidth, yVal), drawColor, 0f, halfHalf, Game1.scale, SpriteEffects.None, 0f);

@@ -1,0 +1,2 @@
+C:\Users\Tubes\Desktop\Telepromter\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010Content\obj\x86\Release\Telepromter-VS2010Content.contentprojResolveAssemblyReference.cache
+D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010Content\obj\x86\Release\Telepromter-VS2010Content.contentprojResolveAssemblyReference.cache
