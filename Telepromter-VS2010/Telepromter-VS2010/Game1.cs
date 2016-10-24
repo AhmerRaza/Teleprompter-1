@@ -38,7 +38,7 @@ namespace Telepromter_VS2010
         protected override void Initialize()
         {
             Mouse.SetPosition(100, (int)middleY);
-            fontSize = new Save().readScore();
+            fontSize = new Save().readValue();
             halfHalf = new Vector2(0.5f, 0.5f); leftTri = new Vector2(-20, 200); rightTri = new Vector2(Window.ClientBounds.Width - 95, 200);
             base.Initialize();
         }
@@ -64,7 +64,7 @@ namespace Telepromter_VS2010
         }
         protected override void UnloadContent()
         {
-            new Save().writeScore((int)fontSize);
+            new Save().writeValue((int)fontSize);
             base.UnloadContent();
         }
         MouseState ms;
