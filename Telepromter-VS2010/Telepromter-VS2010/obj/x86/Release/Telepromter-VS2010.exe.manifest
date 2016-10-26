@@ -93,14 +93,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telepromter-VS2010.exe" size="17920">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telepromter-VS2010.exe" size="18432">
       <assemblyIdentity name="Telepromter-VS2010" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>90va+FotJfrV/zrcIkbke74TNLo=</dsig:DigestValue>
+        <dsig:DigestValue>nxb+sZ54hdwrDRFdCGB24ESFLMs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -140,13 +140,13 @@
       <dsig:DigestValue>diNvdcDpDtGEMuMQIHpkKK3qVHc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SelfDestruct.txt" size="665">
+  <file name="SelfDestruct.txt" size="672">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>ki9SVaLh5TqpWfTeSSWyp5NsMLM=</dsig:DigestValue>
+      <dsig:DigestValue>v59lPNjOmKv86f7JvHnUTEqu0SM=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

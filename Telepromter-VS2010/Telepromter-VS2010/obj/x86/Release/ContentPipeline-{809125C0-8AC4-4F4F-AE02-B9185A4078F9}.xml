@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\Pericles14.xnb</Output>
-      <Time>2016-09-20T09:22:06-04:00</Time>
+      <Output>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\Pericles14.xnb</Output>
+      <Time>2016-10-26T10:34:43.5522287-04:00</Time>
     </Item>
     <Item>
       <Source>triangle.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\triangle.xnb</Output>
-      <Time>2016-09-20T08:37:56-04:00</Time>
+      <Output>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\triangle.xnb</Output>
+      <Time>2016-10-26T10:34:43.7113417-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -26,10 +26,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Release</BuildConfiguration>
       <CompressContent>true</CompressContent>
-      <RootDirectory>D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010Content\</RootDirectory>
-      <LoggerRootDirectory>D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\</IntermediateDirectory>
-      <OutputDirectory>D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

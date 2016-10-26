@@ -24,3 +24,16 @@ D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Tel
 D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.application
 D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.exe
 D:\Teleprompter-master\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.pdb
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\SelfDestruct.txt
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\Pericles14.xnb
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\triangle.xnb
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Telepromter-VS2010.exe.manifest
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Telepromter-VS2010.application
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Telepromter-VS2010.exe
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Telepromter-VS2010.pdb
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.csprojResolveAssemblyReference.cache
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.exe.manifest
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.application
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.exe
+C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.pdb

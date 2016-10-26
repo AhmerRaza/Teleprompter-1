@@ -22,6 +22,7 @@ namespace Telepromter_VS2010
         Vector2 halfHalf, leftTri, rightTri, zero = Vector2.Zero;
         Rectangle triRect = new Rectangle(0, 0, 400, 400);
         KeyboardState oldState;
+        public static bool isLatest = true;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -34,6 +35,7 @@ namespace Telepromter_VS2010
             IsMouseVisible = true;
             String dir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\Telepromter\";
             if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+            VersionChecker.checkForLatest();
         }
         protected override void Initialize()
         {
@@ -125,6 +127,7 @@ namespace Telepromter_VS2010
         }
         protected void DrawShortcuts(SpriteBatch batch)
         {
+
             if (showCuts)
             {
                 batch.DrawString(font, "F1 : Hide Shortcuts", new Vector2(10, 10), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
@@ -134,6 +137,8 @@ namespace Telepromter_VS2010
                 batch.DrawString(font, "Right Click : Stop Scrolling", new Vector2(10, 90), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
                 batch.DrawString(font, "Left Click : Fast Scrolling", new Vector2(10, 110), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
                 batch.DrawString(font, "ESC : Exit Application", new Vector2(10, 130), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
+                if (isLatest) batch.DrawString(font, "Latest Vesion", new Vector2(Window.ClientBounds.Width - 128, 10), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
+                else batch.DrawString(font, "Update Available", new Vector2(Window.ClientBounds.Width - 128, 10), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
             }
             else batch.DrawString(font, "F1 : Show Shortcuts", new Vector2(10, 10), Color.Gray, 0f, zero, .16f, SpriteEffects.None, 0f);
         }
