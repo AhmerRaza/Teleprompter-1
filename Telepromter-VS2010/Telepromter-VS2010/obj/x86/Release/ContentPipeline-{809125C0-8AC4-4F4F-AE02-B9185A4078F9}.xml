@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\Pericles14.xnb</Output>
-      <Time>2016-10-26T10:34:43.5522287-04:00</Time>
+      <Output>C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\Pericles14.xnb</Output>
+      <Time>2016-10-31T22:31:23.3880775-04:00</Time>
     </Item>
     <Item>
       <Source>triangle.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\triangle.xnb</Output>
-      <Time>2016-10-26T10:34:43.7113417-04:00</Time>
+      <Output>C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\triangle.xnb</Output>
+      <Time>2016-10-31T22:31:23.4510818-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -26,39 +26,19 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Release</BuildConfiguration>
       <CompressContent>true</CompressContent>
-      <RootDirectory>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
-      <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2011-09-01T16:22:30-04:00</Value>
-      </Assembly>
-      <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2011-09-01T16:22:30-04:00</Value>
-      </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2011-09-01T16:22:30-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2011-09-01T16:22:30-04:00</Value>
-      </Assembly>
-      <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2011-09-01T16:22:30-04:00</Value>
-      </Assembly>
-      <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2011-09-01T16:22:30-04:00</Value>
-      </Assembly>
-      <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2016-07-06T15:09:45.1724648-04:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-10-26T15:45:56.9865106-04:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

@@ -37,3 +37,24 @@ C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x
 C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.application
 C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.exe
 C:\Users\eahscs\Desktop\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.pdb
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.csprojResolveAssemblyReference.cache
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.exe
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.pdb
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\SelfDestruct.txt
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\Pericles14.xnb
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Content\triangle.xnb
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Telepromter-VS2010.exe.manifest
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Telepromter-VS2010.application
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Telepromter-VS2010.exe
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Telepromter-VS2010.pdb
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Microsoft.Xna.Framework.Game.dll
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Microsoft.Xna.Framework.Game.xml
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\bin\x86\Release\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.exe.manifest
+C:\Users\antho\Documents\Visual Studio 2015\Projects\Teleprompter\Telepromter-VS2010\Telepromter-VS2010\obj\x86\Release\Telepromter-VS2010.application
