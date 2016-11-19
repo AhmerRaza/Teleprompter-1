@@ -9,7 +9,7 @@ namespace Telepromter_VS2010
 {
     class VersionChecker
     {
-        static String Version = "1.1";
+        static String Version = "1.2";
         static String checkUrl = "https://raw.githubusercontent.com/buttilloa/Teleprompter/master/LatestVersion.txt";
         public static void checkForLatest()
         {

@@ -69,28 +69,36 @@ namespace Telepromter_VS2010
             new Save().writeValue((int)fontSize);
             base.UnloadContent();
         }
+        protected override void OnActivated(object sender, EventArgs args)
+        {
+            Mouse.SetPosition(100, middleY);
+            base.OnActivated(sender, args);
+        }
         MouseState ms;
         KeyboardState keyboard;
         protected override void Update(GameTime gameTime)
         {
-            ms = Mouse.GetState();
-            keyboard = Keyboard.GetState();
+            if (IsActive)
+            {
+                ms = Mouse.GetState();
+                keyboard = Keyboard.GetState();
 
-            if (ms.LeftButton == ButtonState.Pressed) smartScroll((middleY - ms.Y) / 10);
-            else smartScroll((middleY - ms.Y) / 100);
+                if (ms.LeftButton == ButtonState.Pressed) smartScroll((middleY - ms.Y) / 10);
+                else smartScroll((middleY - ms.Y) / 100);
 
-            if (keyboard.IsKeyDown(Keys.Escape)) Exit();
-            else if (ms.RightButton == ButtonState.Pressed) Mouse.SetPosition(100, middleY);
-            else if (keyboard.IsKeyDown(Keys.Down)) { Mouse.SetPosition(100, middleY); smartScroll(-5); }
-            else if (keyboard.IsKeyDown(Keys.Up)) { Mouse.SetPosition(100, middleY); smartScroll(5); }
-            else if (KeyPressed(Keys.F1)) showCuts = !showCuts;
-            else if (KeyPressed(Keys.F2)) { Mouse.SetPosition(100, middleY); resetPos(); }
-            else if (KeyPressed(Keys.F3)) { Mouse.SetPosition(100, middleY); resetPos(); loadFile(); }
-            else if (KeyPressed(Keys.OemPlus)) { fontSize++; load(); }
-            else if (KeyPressed(Keys.OemMinus) && fontSize > 10) { fontSize--; load(); }
-            else if (KeyPressed(Keys.H)) { Mouse.SetPosition(100, middleY); resetPos(); SuperSecret(); }
+                if (keyboard.IsKeyDown(Keys.Escape)) Exit();
+                else if (ms.RightButton == ButtonState.Pressed) Mouse.SetPosition(100, middleY);
+                else if (keyboard.IsKeyDown(Keys.Down)) { Mouse.SetPosition(100, middleY); smartScroll(-5); }
+                else if (keyboard.IsKeyDown(Keys.Up)) { Mouse.SetPosition(100, middleY); smartScroll(5); }
+                else if (KeyPressed(Keys.F1)) showCuts = !showCuts;
+                else if (KeyPressed(Keys.F2)) { Mouse.SetPosition(100, middleY); resetPos(); }
+                else if (KeyPressed(Keys.F3)) { Mouse.SetPosition(100, middleY); resetPos(); loadFile(); }
+                else if (KeyPressed(Keys.OemPlus)) { fontSize++; load(); }
+                else if (KeyPressed(Keys.OemMinus) && fontSize > 10) { fontSize--; load(); }
+                else if (KeyPressed(Keys.H)) { Mouse.SetPosition(100, middleY); resetPos(); SuperSecret(); }
 
-            oldState = keyboard;
+                oldState = keyboard;
+            }
             base.Update(gameTime);
         }
         protected void resetPos()
@@ -108,22 +116,25 @@ namespace Telepromter_VS2010
         }
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
-            spriteBatch.Begin();
-            spriteBatch.Draw(triangle, leftTri, triRect, Color.White, 0f, halfHalf, .3f, SpriteEffects.None, 0f);
-            spriteBatch.Draw(triangle, rightTri, triRect, Color.White, 0f, halfHalf, .3f, SpriteEffects.FlipHorizontally, 0f);
-            for (int i = 0, temp = Lines.Count; i < temp; i++)
+            if (IsActive)
             {
-                float yVal = startPos + (i * (StringSize));
-                if (yVal > -70 && yVal < Window.ClientBounds.Height - 30)
+                GraphicsDevice.Clear(Color.Black);
+                spriteBatch.Begin();
+                spriteBatch.Draw(triangle, leftTri, triRect, Color.White, 0f, halfHalf, .3f, SpriteEffects.None, 0f);
+                spriteBatch.Draw(triangle, rightTri, triRect, Color.White, 0f, halfHalf, .3f, SpriteEffects.FlipHorizontally, 0f);
+                for (int i = 0, temp = Lines.Count; i < temp; i++)
                 {
-                    if (Math.Abs(yVal - 200) < StringSize / 2) Lines[i].draw(spriteBatch, yVal, true);
-                    else Lines[i].draw(spriteBatch, yVal, false);
+                    float yVal = startPos + (i * (StringSize));
+                    if (yVal > -70 && yVal < Window.ClientBounds.Height - 30)
+                    {
+                        if (Math.Abs(yVal - 200) < StringSize / 2) Lines[i].draw(spriteBatch, yVal, true);
+                        else Lines[i].draw(spriteBatch, yVal, false);
+                    }
                 }
+                DrawShortcuts(spriteBatch);
+                spriteBatch.End();
+                base.Draw(gameTime);
             }
-            DrawShortcuts(spriteBatch);
-            spriteBatch.End();
-            base.Draw(gameTime);
         }
         protected void DrawShortcuts(SpriteBatch batch)
         {
